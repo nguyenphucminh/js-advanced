@@ -212,7 +212,7 @@ function makeCounter(){
     return increaseCounter
 
     function increaseCounter(){
-        return ++counter
+        return ++counter;
     }
 }
 ```
