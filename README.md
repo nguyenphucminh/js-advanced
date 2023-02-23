@@ -216,3 +216,27 @@ function makeCounter(){
     }
 }
 ```
+## USE STRICT (STRICT MODE)
+#### case
+```
+fullName = 'Nguyen Van A';
+function testFunc() {
+    age = 18;
+} 
+testFunc()
+
+console.log(fullName) -> Nguyen Van A
+console.log(age) -> 8 (?)
+```
+#### solution with 'use strict'
+```
+'use strict'
+fullName = 'Nguyen Van A';
+function testFunc() {
+    age = 18;
+} 
+testFunc()
+
+console.log(fullName) -> 'fullName is not defined'
+console.log(age) -> 8 'age is not defined'
+```
