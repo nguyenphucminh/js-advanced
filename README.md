@@ -212,10 +212,11 @@ function makeCounter(){
     return increaseCounter
 
     function increaseCounter(){
-        return ++counter
+        return ++counter;
     }
 }
 ```
+<<<<<<< HEAD
 ## USE STRICT (STRICT MODE)
 #### case
 ```
@@ -240,3 +241,5 @@ testFunc()
 console.log(fullName) -> 'fullName is not defined'
 console.log(age) -> 8 'age is not defined'
 ```
+=======
+>>>>>>> bab0d454eda28420868fb1b3b499b102abe2ea6b
