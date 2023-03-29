@@ -240,3 +240,42 @@ testFunc()
 console.log(fullName) -> 'fullName is not defined'
 console.log(age) -> 8 'age is not defined'
 ```
+
+## Chuyển đổi sang Boolean bằng toán tử !!
+Đôi khi chúng ta cần kiểm tra xem một số biến có tồn tại hay là giá trị của nó có hợp lệ hay không, để có thể xem nó là giá trị thực (true value).
+
+Để thực hiện loại xác nhận này, bạn có thể sử dụng toán tử !! (Toán tử phủ định kép) đơn giản như là: !!variable
+
+Nó sẽ tự động chuyển đổi bất kỳ loại dữ liệu nào thành boolean:
+
+Biến này sẽ trả về false chỉ khi nó có một số giá trị sau: 0, null, "", undefined hoặc NaN
+Nếu không nó sẽ trả lại true.
+
+```
+function Account(cash) {
+    this.cash = cash;
+    this.hasMoney = !!cash;
+}
+
+var account = new Account(100.50);
+console.log(account.cash); // 100.50
+console.log(account.hasMoney); // true
+
+var emptyAccount = new Account(0);
+console.log(emptyAccount.cash); // 0
+console.log(emptyAccount.hasMoney); // false
+// Trong trường hợp này, nếu giá trị account.cash lớn hơn 0, acount.hasMoney sẽ true
+```
+
+## Làm tròn số
+```
+console.log(23.9 | 0);  // Result: 23
+console.log(-23.9 | 0); // Result: -23
+```
+
+## Sao chép mảng với các giá trị unique
+```
+const array = [1, 1, 2, 3, 5, 5, 1]
+const uniqueArray = [...new Set(array)];
+console.log(uniqueArray); // Result: [1, 2, 3, 5]
+```
