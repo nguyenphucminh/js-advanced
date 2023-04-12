@@ -279,3 +279,65 @@ const array = [1, 1, 2, 3, 5, 5, 1]
 const uniqueArray = [...new Set(array)];
 console.log(uniqueArray); // Result: [1, 2, 3, 5]
 ```
+
+#### Duplicate item in 2 array
+```
+var a = [1, 2, 3], b = [101, 2, 1, 10]
+var c = a.concat(b)
+var d = c.filter((item, pos) => c.indexOf(item) === pos)
+console.log(d)
+```
+#### Async handler
+```
+express.get('/', asyncHandler(async (req, res, next) => {
+    const bar = await foo.findAll();
+    res.send(bar)
+}))
+```
+```
+express.get('/',(req, res, next) => {
+    foo.findAll()
+    .then ( bar => {
+       res.send(bar)
+     } )
+    .catch(next); // error passed on to the error handling route
+})
+```
+#### Mix similar items of 2 arrray
+```
+const topics = [
+  {
+    topic: "ReactJS",
+    posts: [
+      { postID: "id1", title: "title1" },
+      { postID: "id2", title: "title2" },
+    ],
+  },
+  {
+    topic: "Vue.js",
+    posts: [
+      { postID: "id3", title: "title3" },
+      { postID: "id4", title: "title4" },
+    ],
+  },
+];
+const a = topics.reduce((total, item)=>{
+    return [...total, ...item.posts]
+},[])
+console.log("arr", a)
+```
+#### Convert 2 dimensional arr to 1 dimensional arrr
+```
+const data = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+
+const flatValues = data.reduce((total, value) => {
+  return total.concat(value);
+}, []);
+
+console.log(flatValues); // [1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
+
+
+The first one uses the async / await language elements and is more concise.
+https://app.ganttlab.com/
+
