@@ -336,7 +336,8 @@ const flatValues = data.reduce((total, value) => {
 
 console.log(flatValues); // [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
-
+#### Falsy
+=> NaN, null, [], false, 0, ''
 
 The first one uses the async / await language elements and is more concise.
 https://app.ganttlab.com/
